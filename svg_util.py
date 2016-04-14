@@ -25,7 +25,7 @@ class SVGCircle:
     self.fill = fill
 
   def tag(self):
-    return '<circle cx="{0.cx}" cy="{0.cy}" r="{0.r}" stroke="{0.stroke}" ' \
+    return '<circle cx="{0.cx}" cy="{0.cy}" r="{0.r:.03f}" stroke="{0.stroke}" ' \
             'stroke-width="{0.width}" fill="{0.fill}" />'.format(self)
 
 
