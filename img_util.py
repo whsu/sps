@@ -15,6 +15,6 @@ def load_image(imgfile):
 def save_svg(stipples, width, height, svgfile):
   svg = SVG(width, height)
   for x,y,r in stipples:
-    svg.add(SVGCircle(x,y,r))
+    svg.add(SVGCircle(x,y,0.5*r))
   svg.save(svgfile)
 
