@@ -122,4 +122,16 @@ def stipple(imgfile, svgfile, Gn=5.0, Gp=5.0, k=0.1, D=7.0, thresh=127,
   height, width = image.shape
   save_svg(stipples, width, height, svgfile)
 
+if __name__ == '__main__':
+  import sys
+  try:
+    imgfile = sys.argv[1]
+    svgfile = sys.argv[2]
+    Gn = float(sys.argv[3])
+    Gp = float(sys.argv[4])
+    k = float(sys.argv[5])
+    D = float(sys.argv[6])
+    stipple(imgfile, svgfile, Gn, Gp, k, D)
+  except:
+    print("Usage: python sps.py imgfile svgfile Gn Gp k D")
 
